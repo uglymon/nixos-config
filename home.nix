@@ -36,18 +36,31 @@
     extraConfig = builtins.readFile ./customfiles/kitty.conf;
   };
 
-  programs.bash = {
+#   programs.bash = {
+#     enable = true;
+#     enableCompletion = true;
+#     # TODO add your custom bashrc here
+#     bashrcExtra = ''
+#       export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
+#       eval "$(fnm env --use-on-cd --shell bash)"
+#     '';
+
+#     # set some aliases, feel free to add more or remove some
+#     shellAliases = {
+#       #k = "kubectl";
+#     };
+#   };
+
+  programs.zsh = {
     enable = true;
     enableCompletion = true;
-    # TODO add your custom bashrc here
-    bashrcExtra = ''
-      export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
-      eval "$(fnm env --use-on-cd --shell bash)"
-    '';
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
 
-    # set some aliases, feel free to add more or remove some
-    shellAliases = {
-      #k = "kubectl";
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "git" ];
+      theme = "agnoster";
     };
   };
 
