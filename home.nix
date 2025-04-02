@@ -59,6 +59,7 @@
 
 	initExtra = ''
 		eval "$(fnm env --use-on-cd --shell zsh)"
+		alias tty-clock-default="tty-clock -s -c -C 4"
 	'';
 
     oh-my-zsh = {

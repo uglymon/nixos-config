@@ -15,10 +15,11 @@
 
     kime
     firefox
-	microsoft-edge
+    microsoft-edge
 
     fastfetch
     btop
+    tty-clock
 
     networkmanagerapplet
     rofi-wayland
@@ -38,16 +39,16 @@
     wget curl
     fnm
 
-	vscode
-	code-cursor
+    vscode
+    code-cursor
     remmina
     telegram-desktop
 
-	nerd-fonts.d2coding
+    nerd-fonts.d2coding
     nerd-fonts.noto
-	nerd-fonts.fira-code
-	nerd-fonts.fira-mono
-	nerd-fonts.jetbrains-mono
+    nerd-fonts.fira-code
+    nerd-fonts.fira-mono
+    nerd-fonts.jetbrains-mono
     font-awesome
     noto-fonts-cjk-sans
     noto-fonts-emoji
