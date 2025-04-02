@@ -15,6 +15,7 @@
 
     kime
     firefox
+	microsoft-edge
 
     fastfetch
     btop
