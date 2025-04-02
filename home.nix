@@ -22,6 +22,7 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     rofi
+    git git-credential-manager
   ];
 
   # basic configuration of git, please change to your own
@@ -29,6 +30,9 @@
     enable = true;
     userName = "shinji";
     userEmail = "uglymon@gmail.com";
+    extraConfig.credential.helper = "manager";
+    extraConfig.credential."https://github.com".username = "uglymon";
+    extraConfig.credential.credentialStore = "cache";
   };
 
   programs.kitty = {
@@ -57,10 +61,10 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-	initExtra = ''
-		eval "$(fnm env --use-on-cd --shell zsh)"
-		alias tty-clock-default="tty-clock -s -c -C 4"
-	'';
+    initExtra = ''
+        eval "$(fnm env --use-on-cd --shell zsh)"
+        alias tty-clock-default="tty-clock -s -c -C 4"
+    '';
 
     oh-my-zsh = {
       enable = true;
